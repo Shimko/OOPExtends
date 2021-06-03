@@ -1,28 +1,24 @@
 package Наследование;
 
-class Cat extends Animal {
-    public Cat(int run, int swim) {
+public class Cat extends Animal  {
+
+    public Cat( String name, int run) {
+            super( name, run);
+
+
+    }
+
+    public  void catInfo() {
         if (run <200 && run > 0){
             this.run = run;
+            System.out.print(" Кот " + name +" пробежал -" + run +" метров ");
         }
-        if(swim == 0){
-            this.swim = swim;
+        else{
+            System.out.print(" Кот "+ name + " не может пробежать больше 200 метров");
         }
+
+        System.out.print(" Кот" + name + " не умеет плавать");
+
     }
-    public void catInfo(int run, int swim) {
-        System.out.printf("run =%d, swim = %d", run, swim);
-    }
-}
-class Dog extends Animal {
-    public Dog(int run, int swim) {
-        if (run <500 && run >0){
-            this.run = run;
-        }
-        if(swim <10 && swim >0){
-            this.swim = swim;
-        }
-    }
-    public void dogInfo(int run, int swim) {
-        System.out.printf("run =%d, swim = %d", run, swim);
-    }
+
 }
