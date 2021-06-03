@@ -1,20 +1,19 @@
 package Наследование;
 
 public class Animal {
-    public  int run;
-    public  int swim;
+    protected     int run;
+    protected String name;
 
-    public Animal(int run, int swim) {
+    public static int count;
+
+    public Animal(String name, int run) {
+        count++;
         this.run = run;
-        this.swim = swim;
-    }
+        this.name = name;
 
-    public Animal() {
     }
-
-    public void info(String[] args) {
-        System.out.printf("run =%d, swim = %d", run, swim);
+    public static void chekcAnimal() {
+        System.out.println(" Всего животных " + Animal.count);
     }
-
 }
 
